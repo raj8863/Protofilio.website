@@ -1,0 +1,113 @@
+.projects-main {
+  padding: 2rem 1rem;
+ 
+}
+
+.projects-title {
+  font-size: 2.2rem;
+  font-weight: 780;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #96a0b5;
+}
+
+.projects-grid {
+  
+  display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+
+  background: transparent;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #6b81ab;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #cadaf0;
+}
+
+.project-desc {
+  font-size: 0.75rem;
+  color: #9da7b6;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack span {
+  background:transparent;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #3f37a0;
+  font-weight: 600;
+  border: 2px solid rgb(70, 36, 138);
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-live {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-live:hover {
+  background: #1d4ed8;
+}
+
+.btn-code {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.btn-code:hover {
+  background: #e5e7eb;
+}
+ 
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ---------- LAPTOP VERSION (3 cards in one row) ---------- */
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
