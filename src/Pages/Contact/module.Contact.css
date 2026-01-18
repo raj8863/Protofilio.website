@@ -1,0 +1,84 @@
+.contact {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #020617, #020617);
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 16px;
+}
+
+.contact-desc {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #9ca3af;
+  line-height: 1.6;
+ 
+}
+
+.contact-cards {
+  display: grid;
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-card {
+    margin-top: 20px;
+  background: #020617;
+  border: 1px solid #0f172a;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  
+}
+
+.contact-card h4 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-card p {
+  color: #9ca3af;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 26px;
+}
+
+.email {
+  color: #38bdf8;
+}
+
+.location {
+  color: #22c55e;
+}
+
+.github {
+  color: #a855f7;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}

@@ -136,3 +136,47 @@ strong { color: rgba(16, 43, 242, 0.76); }
 
 
 
+/* =========================================
+   LAPTOP & DESKTOP TWEAKS (min-width: 1024px)
+   ========================================= */
+@media screen and (min-width: 1024px) {
+  .home-container {
+    max-width: 1200px; /* 1. Wider layout for laptops */
+    padding: 40px;     /* More internal spacing */
+    margin-top: 80px;  /* 2. Push content down slightly for balance */
+  }
+
+  .h1-tg {
+    /* 3. Bigger, bolder heading for large screens */
+    font-size: 4.5rem; 
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .p1 {
+    font-size: 1.35rem; /* Larger sub-heading */
+    margin-bottom: 32px;
+  }
+
+  .p2 {
+    font-size: 1.15rem; /* More readable body text */
+    max-width: 850px;   /* Allow paragraph to be wider */
+    margin-bottom: 40px;
+  }
+
+  /* 4. Improve Button Interaction on Mouse */
+  .cta-row {
+    gap: 20px; /* More space between buttons */
+  }
+
+  .btn {
+    padding: 14px 28px; /* Larger buttons */
+    font-size: 1.05rem;
+  }
+
+  /* Stronger hover effect for mouse users */
+  .btn:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 16px 36px rgba(37, 99, 235, 0.25);
+  }
+}
