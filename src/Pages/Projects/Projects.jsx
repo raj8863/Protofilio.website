@@ -8,46 +8,6 @@ const Projects = () => {
       <h1 className="projects-title">Featured Projects</h1>
 
       <div className="projects-grid">
-        {/* Study Abroad */}
-        <div className="project-card">
-          <h3 className="project-name">Study Abroad Consultancy Website</h3>
-          <p className="project-desc">
-            The Study Abroad Consultancy Website helps students explore overseas
-            education opportunities including universities, courses, admissions,
-            and visa guidance.
-          </p>
-
-          <div className="tech-stack">
-            <span>React</span>
-            <span>Node</span>
-            <span>MongoDB</span>
-            <span>Express</span>
-            <span>Render</span>
-          </div>
-
-          <div className="btn-group">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-live"
-            >
-              Live Demo
-            </a>
-
-            <a
-              href="https://github.com/raj8863/Study_Abroad_Cousultancy_website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-code"
-            >
-              <FaGithub className="btn-icon" />
-              Code
-            </a>
-          </div>
-        </div>
-
-        {/* HMS */}
         <div className="project-card">
           <h3 className="project-name">Hospital Management System</h3>
           <p className="project-desc">
@@ -74,6 +34,43 @@ const Projects = () => {
 
             <a
               href="https://github.com/raj8863/H.M.S"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-code"
+            >
+              <FaGithub className="btn-icon" />
+              Code
+            </a>
+          </div>
+        </div>
+
+
+        <div className="project-card">
+          <h3 className="project-name">Portfolio Website</h3>
+          <p className="project-desc">
+            Designed and developed a modern, fully responsive personal portfolio website using React.js and Tailwind CSS
+            Built reusable React functional components and applied utility-first Tailwind classes for fast and consistent UI development
+  
+          </p>
+
+          <div className="tech-stack">
+            <span>React</span>
+            <span>Talwind</span>
+            <span>netlify</span>
+          </div>
+
+          <div className="btn-group">
+            <a
+              href="https://raj-kumar-singh-portfolio.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-live"
+            >
+              Live Demo
+            </a>
+
+            <a
+              href="https://github.com/raj8863/Protofilio.website"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-code"
@@ -158,6 +155,47 @@ const Projects = () => {
           </div>
         </div>
 
+        {/* Study Abroad */}
+
+
+        <div className="project-card">
+          <h3 className="project-name">Study Abroad Consultancy Website</h3>
+          <p className="project-desc">
+            The Study Abroad Consultancy Website helps students explore overseas
+            education opportunities including universities, courses, admissions,
+            and visa guidance.
+          </p>
+
+          <div className="tech-stack">
+            <span>React</span>
+            <span>Node</span>
+            <span>MongoDB</span>
+            <span>Express</span>
+            <span>Render</span>
+          </div>
+
+          <div className="btn-group">
+            <a
+              href="https://intake-abroad-study.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-live"
+            >
+              Live Demo
+            </a>
+
+            <a
+              href="https://github.com/raj8863/Study_Abroad_Cousultancy_website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-code"
+            >
+              <FaGithub className="btn-icon" />
+              Code
+            </a>
+          </div>
+        </div>
+
         {/* E-commerce */}
         <div className="project-card">
           <h3 className="project-name">E-commerce Website</h3>
@@ -175,7 +213,7 @@ const Projects = () => {
 
           <div className="btn-group">
             <a
-              href=""
+              href="https://dreamy-dragon-456f07.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-live"
@@ -185,43 +223,6 @@ const Projects = () => {
 
             <a
               href="https://github.com/raj8863/E-commerce-"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-code"
-            >
-              <FaGithub className="btn-icon" />
-              Code
-            </a>
-          </div>
-        </div>
-
-        {/* URL Shortener */}
-        <div className="project-card">
-          <h3 className="project-name">URL Shortener</h3>
-          <p className="project-desc">
-            Converts long URLs into short, shareable links with fast redirection
-            and click analytics.
-          </p>
-
-          <div className="tech-stack">
-            <span>React</span>
-            <span>FastAPI</span>
-            <span>MongoDB</span>
-            <span>Netlify</span>
-          </div>
-
-          <div className="btn-group">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-live"
-            >
-              Live Demo
-            </a>
-
-            <a
-              href="https://github.com/raj8863/URL-Shortener"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-code"

@@ -10,7 +10,7 @@ const MainLayout = () => {
     <div >
       <Navbar />
 
-      {/* main-content should respect navbar height (see CSS below) */}
+      
       <main className="page-wrapper">
         <Outlet />
       </main>

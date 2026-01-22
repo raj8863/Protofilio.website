@@ -1,6 +1,6 @@
 .contact {
   padding: 70px 20px;
-  background: linear-gradient(180deg, #020617, #020617);
+
   color: #e5e7eb;
   text-align: center;
 }
@@ -28,8 +28,8 @@
 }
 
 .contact-card {
-    margin-top: 20px;
-  background: #020617;
+ margin-top: 20px;
+   background: rgba(15, 23, 42, 0.75);
   border: 1px solid #0f172a;
   border-radius: 16px;
   padding: 30px 20px;
@@ -48,6 +48,24 @@
   color: #9ca3af;
   margin-top: 6px;
   font-size: 14px;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(56,189,248,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2);
 }
 
 .icon {

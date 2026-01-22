@@ -25,7 +25,7 @@ const Contact = () => {
         <div className="contact-card">
           <FaMapMarkerAlt className="icon location" />
           <h4>Location</h4>
-          <p>Available within India</p>
+          <p>Available with in India</p>
         </div>
 
         {/* GitHub */}

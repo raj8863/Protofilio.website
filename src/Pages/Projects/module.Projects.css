@@ -1,113 +1,218 @@
+/* ======================================================
+   DESIGN TOKENS
+====================================================== */
+:root {
+  --bg-main: #020617;
+  --card-bg: rgba(30, 41, 59, 0.55);
+  --card-border: rgba(255, 255, 255, 0.12);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-2: #6366f1;
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 25px 60px rgba(56, 189, 248, 0.25);
+
+  --transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======================================================
+   PROJECTS SECTION
+====================================================== */
 .projects-main {
-  padding: 2rem 1rem;
- 
-}
-
-.projects-title {
-  font-size: 2.2rem;
-  font-weight: 780;
-  margin-bottom: 2rem;
+  padding: 80px 0;
   text-align: center;
-  color: #96a0b5;
 }
 
+/* ======================================================
+   TITLE
+====================================================== */
+.projects-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  margin-bottom: 4rem;
+
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ======================================================
+   GRID LAYOUT
+====================================================== */
 .projects-grid {
-  
   display: grid;
- grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
 }
 
+/* ======================================================
+   PROJECT CARD
+====================================================== */
 .project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
 
-  background: transparent;
-  padding: 1.8rem;
-  border-radius: 16px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
-  border: 1px solid #6b81ab;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-soft);
+
+  transition: all 0.45s var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56, 189, 248, 0.08),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.45s;
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(56, 189, 248, 0.35);
 }
 
-
+/* ======================================================
+   PROJECT NAME
+====================================================== */
 .project-name {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 0.8rem;
-  color: #cadaf0;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
 }
 
+/* ======================================================
+   DESCRIPTION
+====================================================== */
 .project-desc {
-  font-size: 0.75rem;
-  color: #9da7b6;
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.4rem;
 }
 
+/* ======================================================
+   TECH STACK TAGS
+====================================================== */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
 }
 
 .tech-stack span {
-  background:transparent;
-  padding: 0.35rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: #3f37a0;
+  padding: 6px 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  border: 2px solid rgb(70, 36, 138);
+  border-radius: var(--radius-md);
+
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
+/* ======================================================
+   BUTTON GROUP
+====================================================== */
 .btn-group {
   display: flex;
   gap: 1rem;
+  margin-top: auto;
 }
 
+/* ======================================================
+   BUTTON BASE
+====================================================== */
 .btn {
-  padding: 0.55rem 1.2rem;
-  border-radius: 8px;
-  border: none;
-  font-size: 0.9rem;
-  cursor: pointer;
+  flex: 1;
+  height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  border-radius: var(--radius-md);
   font-weight: 600;
-  transition: 0.3s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: all 0.35s var(--transition);
 }
 
+/* ======================================================
+   LIVE BUTTON
+====================================================== */
 .btn-live {
-  background: #2563eb;
-  color: white;
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
 }
 
 .btn-live:hover {
-  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
 }
 
+/* ======================================================
+   CODE BUTTON
+====================================================== */
 .btn-code {
-  background: #f3f4f6;
-  color: #111827;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-code:hover {
-  background: #e5e7eb;
-}
- 
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
-/* ---------- LAPTOP VERSION (3 cards in one row) ---------- */
-@media (min-width: 1024px) {
+/* ======================================================
+   ICON
+====================================================== */
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+@media (max-width: 768px) {
+  .projects-main {
+    padding: 60px 0;
+  }
+
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }

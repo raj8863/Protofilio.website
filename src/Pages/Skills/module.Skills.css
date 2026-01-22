@@ -1,97 +1,87 @@
-
-
+/* ======================================================
+   SKILLS SECTION
+====================================================== */
+.main-container {
+  padding: 90px 0;
+}
 
 .container {
   max-width: 1200px;
-  margin: 20px;
+  margin: auto;
   display: flex;
-  gap: 30px;
-  animation: fadeIn 1s ease-in-out;
+  gap: 40px;
+  animation: fadeIn 0.8s ease;
 }
 
-
-
-.Cate-container{
-   max-width: 600px;
-   flex: 1;
-}
-
-.Skill-container{
-  max-width: 600px;
+/* ======================================================
+   CATEGORIES
+====================================================== */
+.Cate-container {
   flex: 1;
-  
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
   color: #38bdf8;
+  margin-bottom: 25px;
 }
 
 .category-card {
   background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 35px;
-  margin-bottom: 18px;
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 32px;
   text-align: center;
   border: 1px solid rgba(56, 189, 248, 0.2);
   transition: all 0.35s ease;
   position: relative;
-  overflow: hidden;
-}
-
-.category-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(56,189,248,0.15), transparent);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.category-card:hover::before {
-  opacity: 1;
 }
 
 .category-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(56, 189, 248, 0.25);
 }
 
 .category-icon {
-  font-size: 36px;
+  font-size: 2.2rem;
+  color: #38bdf8;
   margin-bottom: 10px;
 }
 
 .category-card h3 {
-  font-size: 18px;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .category-card p {
-  font-size: 13px;
+  font-size: 0.85rem;
   color: #94a3b8;
 }
 
-/* ========== SKILLS SECTION ========== */
-.skills {
+/* ======================================================
+   SKILLS
+====================================================== */
+.Skill-container {
   flex: 2;
 }
 
 .skills-title {
-  
+  font-size: 1.8rem;
   text-align: center;
-  font-weight: bold;
-  color: #2bcde6;
-  margin-bottom: 20px;
+  color: #38bdf8;
 }
 
 .sub-title {
-  font-size: 14px;
   text-align: center;
-  color: #c9d3e1;
+  font-size: 0.9rem;
+  color: #cbd5e1;
   margin-bottom: 25px;
 }
 
@@ -103,62 +93,50 @@
 .skill-header {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 0.9rem;
   margin-bottom: 6px;
 }
 
-/* ========== PROGRESS BAR ========== */
+/* ======================================================
+   PROGRESS BAR
+====================================================== */
 .progress-bar {
-  background: #1e293b;
   height: 10px;
-  border-radius: 20px;
+  background: #1e293b;
+  border-radius: 999px;
   overflow: hidden;
-  position: relative;
 }
 
 .progress {
   height: 100%;
-  border-radius: 20px;
+  border-radius: 999px;
   background: linear-gradient(90deg, #22d3ee, #38bdf8);
-  width: 0;
-  animation: loadBar 1.2s ease forwards;
   box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+  animation: loadBar 1.2s ease forwards;
 }
 
-/* ========== ANIMATIONS ========== */
+/* ======================================================
+   ANIMATIONS
+====================================================== */
 @keyframes loadBar {
-  from {
-    width: 0;
-  }
+  from { width: 0; }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* ========== RESPONSIVE ========== */
+/* ======================================================
+   RESPONSIVE
+====================================================== */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-  }
-
-  .skills-title {
-    font-size: 22px;
   }
 }

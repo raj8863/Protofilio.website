@@ -40,13 +40,17 @@ const About = () => {
 
           <div className="button-part">
             <div className="stat">
+                <a  className="a-cont" href="projects">
               <h2>10+</h2>
               <p>Projects Completed</p>
+              </a>
             </div>
 
             <div className="stat">
+                <a className="a-cont" href="experience">
               <h2>6+</h2>
               <p>Months Experience</p>
+              </a>
             </div>
           </div>
         </div>
